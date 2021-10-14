@@ -26,7 +26,22 @@ Data Preprocessing
 Compiling, Training, and Evaluating the Model
 - The initial model contained 2 hidden models, one with 80 neurons and one with 30. Both of these hidden layers utilized using ReLU activation, along with a Sigmoid output layer. The use of a Sigmoid output layer comes with the fact that we want our output to be binary.
 - The initial model did not reach target model performance, as it fell short at 60% accuracy. 
-- In subsequent models, various approaches were taken to improve performance.  In the first optimization attempt, the amount of neurons on hidden layers was increads, from 80 and 30 to 170 and 60, along with the activation was changed to tanh on both. The number of epochs was also changed, from 100 to 150. However, this did not help and actually decreased the success rate from 60% to 59. In the second optimization attempt, the columns of USE_CASE and AFFILIATION were dropped, in order to see if that would reduce unnecessary noise on results and increase accuracy. In addition, the model was changed to three hidden layers, using respectively, 130, 90 and 50 neurons, along with keeping the ReLU activation. Alongside this, the epochs were increased to 200. Again, this optimization did not work,  and further decreased accuracy to 51%. The last optimization attempt kept columns the same, except for the dropped EIN and NAME columns, but again changed the model. This attempt saw an extra hidden layer added again, with respectively, 100, 30 and 20 neurons used. The activation was also changed to LeakyReLU and the epochs were increased again to 250. While performing better than the second attempt, it still failed to perform efficiently, clocking in at 53% accuracy.  
+![InitialOutput](https://github.com/BrieonaT/Neural_Network_Charity_Analysis/blob/main/Resources/Images/initial_output.png)
+
+- In subsequent models, various approaches were taken to improve performance.  In the first optimization attempt, the amount of neurons on hidden layers was increads, from 80 and 30 to 170 and 60, along with the activation was changed to tanh on both. The number of epochs was also changed, from 100 to 150. However, this did not help and actually decreased the success rate from 60% to 59%. In the second optimization attempt, the columns of USE_CASE and AFFILIATION were dropped, in order to see if that would reduce unnecessary noise on results and increase accuracy. In addition, the model was changed to three hidden layers, using respectively, 130, 90 and 50 neurons, along with keeping the ReLU activation. Alongside this, the epochs were increased to 200. Again, this optimization did not work,  and further decreased accuracy to 51%. The last optimization attempt kept columns the same, except for the dropped EIN and NAME columns, but again changed the model. This attempt saw an extra hidden layer added again, with respectively, 100, 30 and 20 neurons used. The activation was also changed to LeakyReLU and the epochs were increased again to 250. While performing better than the second attempt, it still failed to perform efficiently, clocking in at 53% accuracy.  
+
+
+Optimization 1's results:
+
+![Op1_Output](https://github.com/BrieonaT/Neural_Network_Charity_Analysis/blob/main/Resources/Images/optimization_output_1.png)
+
+Optimization 2's results:
+
+![Op2_Output](https://github.com/BrieonaT/Neural_Network_Charity_Analysis/blob/main/Resources/Images/optimization_output_2.png)
+
+Optimization 3's results:
+
+![Op3_Output](https://github.com/BrieonaT/Neural_Network_Charity_Analysis/blob/main/Resources/Images/optimization_output_3.png)
 
 
 
